@@ -6,11 +6,8 @@ require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/contrib'
 
-
 # for templates uncomment the line below
 # require 'erb'
-
-
 
 get '/' do
   # This will be your default route
