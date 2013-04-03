@@ -8,9 +8,20 @@ require 'sinatra/contrib'
 require 'erb'
 
 get '/' do
-  # This will be your default route
+  @name = ["Dario", "Leo","Dario", "'CRM' Sam", "Zahid"].sample
+
+
   erb :index
+
 end
+
+get '/dario' do
+  @dario = "This is Dario's page."
+
+  erb :dario
+
+end
+
 
 # Try adding some other routes
 

@@ -1,0 +1,32 @@
+	body {
+		background-color:whiteSmoke;
+	}
+	.header,.footer {
+		background-color: #1650E8;
+	}
+	.ben {
+		font-size: 25px;
+		font-family: verdana;
+		color: #2528FF;
+		font-weight: bold;
+	}
+
+	img {
+		height: 300px;
+    	width: 200px;
+	}
+
+	.dario_button {
+		background-color: #9218FF;
+		color: white;
+		border-radius: 3px;
+		border: 8px black ;
+		padding: 3px 3px;
+
+	}
+
+	a {
+		color: white;
+		font-weight: bold;
+		text-decoration: none;
+	}
