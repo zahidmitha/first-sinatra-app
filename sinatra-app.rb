@@ -6,19 +6,19 @@ require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/contrib'
 require 'erb'
+require 'data_mapper'
 
 get '/' do
-  @name = ["Dario", "Leo","Dario", "'CRM' Sam", "Zahid"].sample
+  @name = ["Dario", "Leo","Dario", "Weak Sam", "Zahid"].sample
 
 
   erb :index
 
 end
 
-get '/dario' do
-  @dario = "This is Dario's page."
+get '/create-user' do
 
-  erb :dario
+  erb :form
 
 end
 
