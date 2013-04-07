@@ -2,12 +2,14 @@
 		background-color:whiteSmoke;
 	}
 	.header,.footer {
-		background-color: #1650E8;
+		background-color: #24007F;
+		padding-bottom: 3px;
+		padding-top: 3px;
+		padding-left: 4px;
 	}
 	.ben {
 		font-size: 25px;
 		font-family: verdana;
-		color: #2528FF;
 		font-weight: bold;
 	}
 
@@ -17,16 +19,41 @@
 	}
 
 	.sign_up_button {
-		background-color: #9218FF;
+		background-color: #0D4CFF;
 		color: white;
-		border-radius: 3px;
-		border: 8px black ;
-		padding: 3px 3px;
+		border-radius: 4px;
+		border: 1px black;
+		padding: 7px 7px;
+		margin-bottom: 10px;
 
 	}
 
-	a {
+	.sign_up {
 		color: white;
 		font-weight: bold;
 		text-decoration: none;
+		font-size: 20px;
+	}
+
+	.user {
+		border: 2px solid grey;
+		border-radius: 3px;
+		margin: 3px;
+		padding: 3px;
+	}
+
+	.user_name, .comment_name {
+		font-weight: bold;
+		color: #0D4CFF;
+	}
+
+	.actions {
+		display: inline-block;
+
+
+	}
+
+	.user_edit_buttons {
+		text-decoration: none;
+
 	}

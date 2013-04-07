@@ -1,12 +1,17 @@
 
-<p>Join Freemasonism and experience the joy of Shawshank and the majestic grandeur of Penguins</p>
+<div style="margin: 25px 0px;">
+Join Freemasonism and experience the joy of Shawshank and the majestic grandeur of Penguins<form method="GET" action="/user">View convert named<input type="text" name="firstname" />
+<input type="text" name="lastname" />
+<input type="submit" value="Submit" />
+</form>
+</div>
 
-
+<div>
 <%= erb :picture, :layout => false %>
-<p class="ben"><%= @name %> just joined the Morgan Freemasons</p>
+</div>
+<p class="ben"><%= @name %> just joined the Morgan Freemasons. When will <strong>you</strong>?</p>
 
-<button class="sign_up_button"><a href="/create-user">Get started now!</a></button>
-
+<button class="sign_up_button"><a href="/create-user" class="sign_up">Get converted now</a></button>
 
 
 

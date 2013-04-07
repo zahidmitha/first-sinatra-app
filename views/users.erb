@@ -1,0 +1,27 @@
+
+	<% @users.each do |user| %>
+	<div class="user">
+	<span class="user_name">First Name:</span> <%= user.first_name %>
+	<br />
+	<span class="user_name">Last Name:</span> <%= user.last_name %>
+	<br />
+	<span class="user_name">SSN:</span> <%= user.socialsecurity %>
+	<br />
+	<span class="user_name">Convertability:</span> <%= user.commitment %>
+	</div>
+	<div class="actions">
+		<button class="user_changes_button"><a href="/user/<%= user.id %>" class="user_edit_buttons">Change</a></button>
+		<form method="POST" action="/user/<%= @user.id %>" >
+		<input type="hidden" name="_method" value="delete"><input type="submit" value="Delete" class="user_changes_button">
+		</form>
+		<button class="user_changes_button"><a href="/create_comment" class="user_edit_buttons">Comment</a></button>
+	</div>
+	<% end %>
+
+	<% @comments.each do |comment| %>
+		<span class="comment_name">Name:</span> <%= comment.name %>
+		<br />
+		<span>Comment:</span> <%= comment.comment %>
+
+	<% end %>
+

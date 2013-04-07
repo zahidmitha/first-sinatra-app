@@ -1,0 +1,19 @@
+<div class="user">
+<form method="POST" action="/user/<%= @user.id %>" >
+	<input type="hidden" name="_method" value="put">
+	First Name: <input type="text" name="firstname" value="<%= @user.first_name %>">
+	<br />
+	Last Name: <input type="text" name="lastname" value="<%= @user.last_name %>">
+	<br />
+	SSN: <input type="text" name="socialsecurity" value="<%= @user.socialsecurity %>">
+	<br />
+	Convertability:
+	<input type="radio" name="commitment" value="<%= @user.commitment %>">Yes<br>
+	<input type="radio" name="commitment" value="<%= @user.commitment %>">Definitely
+	<br>
+	<input type="submit" value="Save Changes">
+</form>
+</div>
+<div>
+	<a href="/users">Go back</a>
+</div>
