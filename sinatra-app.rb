@@ -10,6 +10,7 @@ require 'sinatra/contrib'
 require 'erb'
 require 'data_mapper'
 require './lib/user'
+require './lib/comment'
 
 DataMapper.setup(:default, 'postgres://postgres:postgres@localhost/first-sinatra-app')
 DataMapper.finalize
@@ -63,12 +64,12 @@ get '/user' do
   erb :user
 end
 
-get '/user/:id' do
+get '/users/:id' do
   @user = User.get(params[:id])
   erb :user
 end
 
-put '/user/:id' do
+put '/users/:id' do
   user = User.get(params[:id])
   user.update(
     :first_name      => params[:firstname],
@@ -81,33 +82,34 @@ put '/user/:id' do
 
 end
 
-post '/user/:id' do
+delete '/users/:id' do
   user = User.get(params[:id])
-  user.destroy(
-    :first_name      => params[:firstname],
-    :last_name       => params[:lastname],
-    :socialsecurity => params[:socialsecurity],
-    :commitment => params[:commitment]
-    )
-  erb :users
-
-end
-
-get '/create_comment' do
-
-  erb :create_comment
-end
-
-post '/users' do
-
-  @comment = Comment.create(
-  :name      => params[:name],
-  :comment => params[:comment]
-)
+  user.destroy
 
   redirect '/users'
 
 end
+
+get '/users/:user_id/comments/new' do
+
+  @user = User.get(params[:user_id])
+  erb :create_comment
+
+end
+
+
+post '/users/:user_id/comments' do
+
+  @user = User.get(params[:user_id])
+  @user.comments.create(
+    :name      => params[:name],
+    :comment => params[:comment]
+  )
+
+  redirect '/users'
+
+end
+
 
 
 

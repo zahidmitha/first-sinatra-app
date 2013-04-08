@@ -4,6 +4,7 @@ class Comment
   property :id, Serial
   property :name, String
   property :comment, String
-  property :time, Time.now
+
+  belongs_to :user, :required => false
 
 end
